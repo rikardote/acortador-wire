@@ -1,6 +1,6 @@
 <div class="w-full flex flex-col sm:justify-center items-center bg-gray-100">
     <div class="w-full px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        <p class="font-bold text-lg mb-5">URLShortened</p>
+        <p class="font-bold text-lg mb-5 text-green-800 "> <i class="fas fa-link fa-3x"></i> URLShortened</p>
         <div class="">
             <input wire:model="full_url" type="text"
                 class="appearance-none bg-white border-2 bg-blue py-3 px-4 w-full"
