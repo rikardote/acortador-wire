@@ -4,10 +4,10 @@
         <div class="">
             <input wire:model="full_url" type="text"
                 class="appearance-none bg-white border-2 bg-blue py-3 px-4 w-full"
-                placeholder="Ingresa la Url que gustes acortar ">
+                placeholder="Insert URL here...">
         </div>
         <div class="flex justify-end">
-            <button wire:click="save" class="mt-2 bg-green-600 hover:bg-green-800 text-white font-bold rounded py-3 px-4">Acortar URL</button>
+            <button wire:click="save" class="mt-2 bg-green-600 hover:bg-green-800 text-white font-bold rounded py-3 px-4">Short URL</button>
         </div>
 
 
