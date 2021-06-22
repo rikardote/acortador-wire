@@ -5,7 +5,6 @@ use Illuminate\Support\Str;
 
 return [
 
-
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -47,12 +46,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'mysql://ba51ca3b7ca617:1540256b@us-cdbr-east-04.cleardb.com/heroku_d8a72be0a7e1703?reconnect=true',
-            'host' => 'us-cdbr-east-04.cleardb.com',
-            'port' => '3306',
-            'database' => 'heroku_d8a72be0a7e1703',
-            'username' => 'ba51ca3b7ca617' ,
-            'password' => '1540256b ',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

@@ -1,4 +1,4 @@
-<div class="w-full flex flex-col sm:justify-center items-center bg-gray-100">
+<div class="w-full flex flex-col sm:justify-center items-center bg-gray-100 bg-white dark:bg-black">
     <div class="w-full px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
         <p class="font-bold text-lg mb-5 text-green-800 "> <i class="fas fa-link fa-3x"></i> URLShortened</p>
         <div class="">
@@ -9,7 +9,6 @@
         <div class="flex justify-end">
             <button wire:click="save" class="mt-2 bg-green-600 hover:bg-green-800 text-white font-bold rounded py-3 px-4">Short URL</button>
         </div>
-
 
         <div class="flex flex-col mt-6">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
