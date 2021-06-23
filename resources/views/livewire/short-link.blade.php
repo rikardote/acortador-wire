@@ -1,45 +1,45 @@
-<div class="w-full flex flex-col sm:justify-center items-center bg-gray-100 bg-white dark:bg-black">
-    <div class="w-full px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        <p class="font-bold text-lg mb-5 text-green-800 "> <i class="fas fa-link fa-3x"></i> URLShortened</p>
+<div class="flex flex-col items-center w-full sm:justify-center">
+    <div class="w-full px-6 py-4 overflow-hidden bg-white shadow-md sm:rounded-lg dark:bg-gray-800">
+        <p class="mb-5 text-lg font-bold text-green-800 "> <i class="fas fa-link fa-3x"></i> URLShortened</p>
         <div class="">
             <input wire:model="full_url" type="text"
-                class="appearance-none bg-white border-2 bg-blue py-3 px-4 w-full"
+                class="w-full px-4 py-3 bg-white border-2 rounded appearance-none dark:bg-gray-300 dark:text-gray-500 "
                 placeholder="Insert URL here...">
         </div>
         <div class="flex justify-end">
-            <button wire:click="save" class="mt-2 bg-green-600 hover:bg-green-800 text-white font-bold rounded py-3 px-4">Short URL</button>
+            <button wire:click="save" class="px-4 py-3 mt-2 font-bold text-white bg-green-600 rounded hover:bg-green-800">Short URL</button>
         </div>
 
-        <div class="flex flex-col mt-6">
+        <div class="flex flex-col mt-6 ">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden border-b border-gray-200 bg-white sm:rounded-lg">
+                <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8 ">
+                    <div class="overflow-hidden bg-white border-b border-gray-200 shadow sm:rounded-lg">
                         @if($links->count())
-                            <table class="min-w-full divide-y divide-gray-200">
+                            <table class="min-w-full divide-y divide-gray-200 ">
                             <thead>
                                 <tr>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-50 dark:bg-green-800 dark:text-gray-200">
                                     Original URL
                                 </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                <th class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-50 dark:bg-green-800 dark:text-gray-200">
                                     Short version
                                 </th>
-                                <th class="px-6 py-3 bg-gray-50"></th>
+                                <th class="px-6 py-3 bg-gray-50 dark:bg-green-800"></th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
+                            <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-600 dark:text-gray-200">
                                 @foreach($links as $link)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-no-wrap">
                                             {{ substr($link->full_url, 0, 50) }}@if(strlen($link->full_url) > 50)...@endif
                                         </td>
                                         <td class="px-6 py-4 whitespace-no-wrap">
-                                            <a href="{{ $link->shorted_url }}" target="__blank" class="px-2 inline-flex leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                            <a href="{{ $link->shorted_url }}" target="__blank" class="inline-flex px-2 font-semibold leading-5 text-green-800 bg-green-100 rounded-full">
                                                 {{ $link->shorted_url }}
                                             </a>
                                         </td>
 
-                                        <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
+                                        <td class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap">
                                             <button wire:click="delete({{ $link->id }})" class="text-red-500"><span class="fas fa-trash fa-2x"></span> </button>
                                         </td>
                                     </tr>
@@ -47,7 +47,7 @@
                             </tbody>
                             </table>
                         @else
-                            <p class="text-center p-4">No links found..</p>
+                            <p class="p-4 text-center">No links found..</p>
                         @endif
                     </div>
                 </div>
