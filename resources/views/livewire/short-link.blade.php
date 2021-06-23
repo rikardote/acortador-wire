@@ -27,7 +27,7 @@
                                 <th class="px-6 py-3 bg-gray-50 dark:bg-gray-700"></th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-600 dark:text-gray-200">
+                            <tbody class="divide-y divide-gray-200 dark:bg-gray-600 dark:text-gray-200">
                                 @foreach($links as $link)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-no-wrap">
