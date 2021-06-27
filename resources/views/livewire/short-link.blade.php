@@ -7,7 +7,7 @@
                 placeholder="Insert URL here...">
         </div>
         <div class="flex justify-end">
-            <button wire:click="save" class="px-4 py-3 mt-2 text-white bg-green-600 rounded hover:bg-green-800 dark:bg-red-400 dark:text-gray-100">Short URL</button>
+            <button wire:click="save" class="px-4 py-3 mt-2 text-white bg-green-600 rounded-lg hover:bg-green-800 dark:bg-red-400 dark:text-gray-100">Short URL</button>
         </div>
 
         <div class="flex flex-col mt-6 ">

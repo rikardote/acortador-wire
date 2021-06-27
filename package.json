@@ -22,5 +22,7 @@
         "postcss-import": "^12.0.1",
         "tailwindcss": "^2.2.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "flatpickr": "^4.6.9"
+    }
 }
